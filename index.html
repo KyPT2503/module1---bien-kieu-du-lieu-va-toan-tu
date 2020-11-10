@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table
+        {
+            border-collapse:collapse;
+        }
+        td,th
+        {
+            border:1px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th></th>
+            <th>INPUT</th>
+            <th>OUTPUT</th>
+        </tr>
+        <tr>
+            <td>bai1</td>
+            <td onchange="bai1()">
+                <input type="text" id="bai1inputToan" placeholder="0"><br>
+                <input type="text" id="bai1inputLi" placeholder="0"><br>
+                <input type="text" id="bai1inputHoa" placeholder="0">
+            </td>
+            <td id="bai1output"></td>
+        </tr>
+        <tr>
+            <td>bai2</td>
+            <td><input type="text" id="bai2input" onchange="bai2()"></td>
+            <td id="bai2output"></td>
+        </tr>
+        <tr>
+            <td>bai3</td>
+            <td><input type="text" id="bai3input" onchange="bai3()"></td>
+            <td id="bai3output"></td>
+        </tr>
+        <tr>
+            <td>bai4</td>
+            <td><input type="text" id="bai4input" onchange="bai4()"></td>
+            <td id="bai4output"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    function bai1()
+    {
+        document.getElementById("bai1output").innerHTML=((+(document.getElementById("bai1inputToan").value))+(+(document.getElementById("bai1inputHoa").value))+(+(document.getElementById("bai1inputLi").value)))/3;
+    }
+    function bai2()
+    {
+        let x=+(document.getElementById("bai2input").value);
+        document.getElementById("bai2output").innerHTML=(x/5)*9+32;
+    }
+    function bai3()
+    {
+        let r=+(document.getElementById("bai3input").value);
+        document.getElementById("bai3output").innerHTML=3.14*r*r;
+    }
+    function bai4()
+    {
+        let r=+(document.getElementById("bai4input").value);
+        document.getElementById("bai4output").innerHTML=2*3.14*r;
+    }
+</script>
+</body>
+</html>
